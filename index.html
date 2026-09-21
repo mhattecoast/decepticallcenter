@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decepticall Center | Customer Subjugation Services</title>
+    <!-- Decepticon Sci-Fi Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-img-box">
+                <img src="decepticonlogo.png" alt="Decepticon Logo">
+            </div>
+            <div class="logo-text">
+                <h1>DECEPTICALL</h1>
+                <p>CUSTOMER SUBJUGATION SERVICES</p>
+            </div>
+        </div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#leadership">Leadership</a>
+            <a href="#complaints">Grievances</a>
+            <a href="#careers">Careers</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>YOUR COMPLAINTS ARE LOGICAL... AND REJECTED.</h2>
+        <p>Welcome to Decepticall Center. We dominate your customer experience, enslave your patience, and harvest your support tickets into Energon reserves for Lord Megatron.</p>
+        <div>
+            <button class="btn btn-accent" onclick="startCallSimulator()">Dial Support (1-800-TYRANNY)</button>
+            <button class="btn" onclick="triggerTransformSound()">Transform IVR System</button>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <!-- Live Telemetry Terminal -->
+        <section class="interactive-section">
+            <h3 class="interactive-title">LIVE IVR TELEMETRY TERMINAL</h3>
+            <p class="interactive-subtitle">Establish communication link to initiate automated subjugation.</p>
+            
+            <div class="terminal-window" id="terminal">
+                <p>[SYSTEM IDLE]: Awaiting pathetic human interaction...</p>
+            </div>
+
+            <div class="audio-bar-container" id="visualizer">
+                <div class="audio-bar"></div><div class="audio-bar"></div><div class="audio-bar"></div>
+                <div class="audio-bar"></div><div class="audio-bar"></div><div class="audio-bar"></div>
+                <div class="audio-bar"></div><div class="audio-bar"></div>
+            </div>
+
+            <div class="controls-wrapper">
+                <button class="btn btn-sm" onclick="sendTerminalInput('1')">Press 1: Escalate</button>
+                <button class="btn btn-sm" onclick="sendTerminalInput('2')">Press 2: Surrender</button>
+                <button class="btn btn-sm" onclick="sendTerminalInput('3')">Press 3: Speak to Starscream</button>
+            </div>
+        </section>
+
+        <!-- Leadership Roster with img src hover reveal -->
+        <div class="text-center">
+            <h2 class="section-title" id="leadership">Executive Terror Team</h2>
+        </div>
+        
+        <div class="grid">
+            <!-- Megatron -->
+            <div class="card character-card">
+                <img src="megatron.png" alt="Megatron" class="character-hover-img">
+                <div class="card-content">
+                    <h3>MEGATRON</h3>
+                    <div class="role">Chief Executive Oppressor (CEO)</div>
+                    <p>“Peace through tyrannical hold music.” Megatron guarantees that every customer issue is crushed under the heel of uncompromising corporate bureaucracy.</p>
+                </div>
+            </div>
+            
+            <!-- Starscream -->
+            <div class="card character-card">
+                <img src="starscream.png" alt="Starscream" class="character-hover-img">
+                <div class="card-content">
+                    <h3>STARSCREAM</h3>
+                    <div class="role">VP of Backstabbing & Escalations</div>
+                    <p>Constantly attempting to overthrow Megatron's shift schedules. Will promise you a full refund, only to disconnect your call when you ask for confirmation.</p>
+                </div>
+            </div>
+
+            <!-- Soundwave -->
+            <div class="card character-card">
+                <img src="soundwave.png" alt="Soundwave" class="character-hover-img">
+                <div class="card-content">
+                    <h3>SOUNDWAVE</h3>
+                    <div class="role">Head of Wiretapping & Surveillance</div>
+                    <p>Decepticall Center Operations: Superior. Customer Grievance: Inferior. Soundwave monitors all calls for quality control and blackmail opportunities.</p>
+                </div>
+            </div>
+
+            <!-- Shockwave -->
+            <div class="card character-card">
+                <img src="shockwave.png" alt="Shockwave" class="character-hover-img">
+                <div class="card-content">
+                    <h3>SHOCKWAVE</h3>
+                    <div class="role">Chief Logic & Retention Officer</div>
+                    <p>Determines scientifically that resolving your ticket is mathematically illogical. Designed an IVR menu with 84 nested options that loop endlessly.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Corporate Offerings -->
+        <div class="text-center">
+            <h2 class="section-title" id="services">Subjugation Services</h2>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Infinite Hold Queues</h3>
+                <p>We leverage space-bridge tech to stretch your wait time into a temporal loop. Enjoy crisp, distorted pan-flute audio for eternity.</p>
+            </div>
+
+            <div class="card">
+                <h3>Aggressive Upselling</h3>
+                <p>Call in to fix your internet router, leave having purchased an orbital plasma cannon subscription with a 36-month mandatory commitment.</p>
+            </div>
+
+            <div class="card">
+                <h3>Rogue AI Chatbots</h3>
+                <p>Our chatbots don't answer queries; they demand your unconditional surrender, mock your technical skills, and mark your ticket as "Resolved by Force."</p>
+            </div>
+        </div>
+
+        <!-- Grievance Form -->
+        <section class="complaint-section" id="complaints">
+            <h2 class="complaint-title">TRANSMIT HUMAN GRIEVANCE</h2>
+            <form onsubmit="handleComplaintSubmit(event)">
+                <div class="form-group">
+                    <label for="humanName">Insignificant Human Name:</label>
+                    <input type="text" id="humanName" placeholder="e.g., Fleshling #4029" required>
+                </div>
+                <div class="form-group">
+                    <label for="complaintText">Nature of Grievance:</label>
+                    <textarea id="complaintText" rows="4" placeholder="Detail your futile struggle..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-accent btn-full">Transmit to Incinerator</button>
+            </form>
+        </section>
+
+        <!-- Careers Banner -->
+        <section class="careers-section" id="careers">
+            <h2 class="careers-title">JOIN THE DECEPTICALL HORDE</h2>
+            <p class="careers-desc">Are you a seeker looking for high-stress work? Do you enjoy hanging up on people right before 5:00 PM?</p>
+            <button class="btn" onclick="alert('ERROR: Your resume lacked sufficient evil credentials. Application incinerated.')">Apply as Constructicon Agent</button>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Decepticall Center Corp. All rights reserved. A Subsidiary of Cybertron Industries.</p>
+        <p class="legal-notice">Decepticall Center is not responsible for lost patience, corrupted data, or planetary conquest. All Autobots will be placed on permanent mute.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
